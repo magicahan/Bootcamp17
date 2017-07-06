@@ -9,6 +9,7 @@ Created on Tue Jul  4 15:25:31 2017
 import pandas as pd
 from pydataset import data
 import numpy as np
+import matplotlib.pyplot as plt
 
 diamonds = data('diamonds')
 

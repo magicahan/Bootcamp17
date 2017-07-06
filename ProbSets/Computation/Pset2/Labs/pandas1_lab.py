@@ -5,7 +5,8 @@ Created on Thu Jun 29 09:08:17 2017
 
 @author: luxihan
 """
-
+import pandas as pd
+import numpy as np
 import matplotlib.pyplot as plt
 import random
 
@@ -14,7 +15,7 @@ def create_sereis():
     entry = [-3] * 5
     index = [(i + 1) * 2 for i in range(5)]
     const_array = pd.Series(entry, index = index)
-    
+     
     name_dict = {'Bill': 31, 'Sarah': 28, 'Jane': 34, 'Joe': 26}
     dict_array = pd.Series(name_dict)
     return const_array, dict_array
@@ -39,6 +40,7 @@ def create_random_walk():
     s.plot(label = 'Non Random Walk {}'.format(i + 1), color = 'k')
     plt.ylim([-50, 50])
     plt.legend(loc='center left', bbox_to_anchor=(1, 0.5))
+    plt.title('Random Walk Plot')
     plt.show()
     plt.close
     
@@ -48,6 +50,9 @@ def operate_sql(data):
     return rv_data
     
 if __name__ == '__main__':
+    #Problem 2
+    create_random_walk()
+    
     #build toy data for SQL operations
     name = ['Mylan', 'Regan', 'Justin', 'Jess', 'Jason', 'Remi', 'Matt', \
                 'Alexander', 'JeanMarie']
